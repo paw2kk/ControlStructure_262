@@ -1,13 +1,4 @@
 def evaluate_performance(percentage):
-    """
-    Evaluates student performance based on percentage.
-    
-    Args:
-        percentage: Student's percentage score (0-100)
-    
-    Returns:
-        Performance category as a string
-    """
     if percentage >= 90:
         return "Excellent performance"
     elif percentage >= 80:

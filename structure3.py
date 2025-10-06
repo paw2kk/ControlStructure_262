@@ -1,16 +1,4 @@
 def fibonacci_series(n):
-    """
-    Generates and prints Fibonacci series up to n terms.
-    
-    Fibonacci series: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
-    Each number is the sum of the previous two numbers.
-    
-    Args:
-        n: Number of terms to generate
-    
-    Returns:
-        List of Fibonacci numbers
-    """
     if n <= 0:
         return []
     elif n == 1:
@@ -59,15 +47,3 @@ try:
 
 except ValueError:
     print("\nError: Please enter a valid integer!")
-
-
-# Alternative Method (commented out)
-"""
-# Method 2: Without using list (just printing)
-def print_fibonacci(n):
-    a, b = 0, 1
-    for i in range(n):
-        print(a, end=" ")
-        a, b = b, a + b
-    print()
-"""

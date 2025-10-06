@@ -1,16 +1,4 @@
 def print_odd_numbers(n):
-    """
-    Generates and prints all odd numbers from 1 to n.
-    
-    Odd numbers are numbers that are not divisible by 2.
-    Example: 1, 3, 5, 7, 9, 11, ...
-    
-    Args:
-        n: The upper limit (inclusive)
-    
-    Returns:
-        List of odd numbers
-    """
     odd_list = []
     
     for num in range(1, n + 1):
@@ -50,19 +38,3 @@ try:
 
 except ValueError:
     print("\nError: Please enter a valid integer!")
-
-
-# Alternative Methods (commented out)
-"""
-# Method 2: Using range with step (more efficient)
-def get_odd_numbers(n):
-    return list(range(1, n + 1, 2))
-
-# Method 3: Using list comprehension
-odd_numbers = [num for num in range(1, n + 1) if num % 2 != 0]
-
-# Method 4: Simple loop without function
-for i in range(1, n + 1):
-    if i % 2 != 0:
-        print(i, end=" ")
-"""

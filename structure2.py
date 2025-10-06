@@ -1,13 +1,4 @@
 def find_largest(num1, num2, num3):
-    """
-    Finds the largest of three numbers.
-    
-    Args:
-        num1, num2, num3: Three numbers to compare
-    
-    Returns:
-        The largest number
-    """
     if num1 >= num2 and num1 >= num3:
         return num1
     elif num2 >= num1 and num2 >= num3:
@@ -40,22 +31,3 @@ try:
 
 except ValueError:
     print("\nError: Please enter valid numbers!")
-
-
-# Alternative methods (commented out)
-"""
-# Method 2: Using max() function
-largest = max(num1, num2, num3)
-
-# Method 3: Using nested if-else
-if num1 >= num2:
-    if num1 >= num3:
-        largest = num1
-    else:
-        largest = num3
-else:
-    if num2 >= num3:
-        largest = num2
-    else:
-        largest = num3
-"""
