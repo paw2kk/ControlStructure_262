@@ -1,49 +1,10 @@
-def fibonacci_series(n):
-    if n <= 0:
-        return []
-    elif n == 1:
-        return [0]
-    elif n == 2:
-        return [0, 1]
-    
-    # Initialize first two terms
-    fib_list = [0, 1]
-    
-    # Generate remaining terms
-    for i in range(2, n):
-        next_term = fib_list[i-1] + fib_list[i-2]
-        fib_list.append(next_term)
-    
-    return fib_list
+# Fibonacci numbers up to n (max value)
 
+n = int(input("Enter the maximum value: "))
 
-# Main program
-print("=" * 50)
-print("Fibonacci Series Generator")
-print("=" * 50)
+a, b = 0, 1
 
-try:
-    # Get number of terms from user
-    n = int(input("\nEnter the number of terms: "))
-    
-    if n <= 0:
-        print("\nPlease enter a positive number!")
-    else:
-        # Generate Fibonacci series
-        fibonacci = fibonacci_series(n)
-        
-        # Display result
-        print("\n" + "-" * 50)
-        print(f"Fibonacci Series (first {n} terms):")
-        print("-" * 50)
-        
-        # Print series in a nice format
-        for i, num in enumerate(fibonacci, 1):
-            print(f"Term {i}: {num}")
-        
-        print("\n" + "-" * 50)
-        print(f"Series: {', '.join(map(str, fibonacci))}")
-        print("-" * 50)
-
-except ValueError:
-    print("\nError: Please enter a valid integer!")
+print("Fibonacci series up to", n, ":")
+while a <= n:
+    print(a, end=" ")
+    a, b = b, a + b
